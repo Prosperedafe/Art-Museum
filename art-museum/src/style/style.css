@@ -1,0 +1,5 @@
+.login-box{
+    background: url(../images/Background\ Image.svg) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
