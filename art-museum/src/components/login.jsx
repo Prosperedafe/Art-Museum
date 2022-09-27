@@ -1,6 +1,6 @@
 import { Text, Box, Button, Input } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import Style from "../style/style.css";
-import { Link } from "@chakra-ui/react";
 
 const Login = () => {
   return (
@@ -45,7 +45,7 @@ const Login = () => {
           <Text>Forgot your password</Text>
         </Link>
 
-        <Link to="/">
+        <Link to="/collections">
           <Button
             bg="#FF473A"
             color="white"
