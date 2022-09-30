@@ -6,8 +6,5 @@
 a{
     color: white;
     display: block;
-    margin: .5rem 0;
-}
-a p{
-    float: right;
+    margin: .5rem 1rem;
 }

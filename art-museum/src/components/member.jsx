@@ -1,10 +1,12 @@
 import { Text, Box, Heading, Button, Flex } from "@chakra-ui/react";
 import Bounty from "../images/bounty.png";
 import Open from "../images/open.svg";
+import Navbar from "./navbar";
 
 const Member = () => {
   return (
     <>
+      <Navbar />
       <Box as="section" pos="relative">
         <Box as="figure">
           <img src={Bounty} width="100%" height="auto" />

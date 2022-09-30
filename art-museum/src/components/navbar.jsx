@@ -7,108 +7,177 @@ import Visit from "../images/visit.svg";
 import Collections from "../images/Collections.svg";
 import Artist from "../images/artists.svg";
 import Member from "../images/member.svg";
-import Menu from "../images/menu-icon.svg";
-import { Link } from "@chakra-ui/react";
+import Logout from "../images/logout.svg";
+import Cartimg from "../images/cart-white.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  // const { countCartItems } = props;
   const [isOpen, setisOpen] = useState(false);
   const handleClick = () => {
     setisOpen((current) => !current);
   };
 
   return (
-    <header bg="black">
+    <Box as="header" bg="white" pb="5rem" pos="relative" zIndex="1">
       <Box
         as="nav"
-        marginBottom=".5rem"
-        py=".3rem"
-        boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
+        bg="white"
+        marginBottom="1rem"
+        w="100%"
+        zIndex="1"
+        px=".5rem"
+        pos="fixed"
+        top="0"
+        left="0"
+        boxShadow="0px 2px 4px rgba(0, 0, 0, 0.25)"
       >
         <Flex justify="space-between" align="center" p=".7rem">
-          <Text fontSize="1rem" fontWeight="500" lineHeight="1.2rem">
-            THE ART
+          <Text fontSize=".9rem" fontWeight="500" lineHeight="1rem">
+            THE <br />
+            ART
             <br /> MUSEUM
           </Text>
-          {isOpen && (
-            <Box
-              pos="absolute"
-              top="0"
-              left="0"
-              right="3rem"
-              overflowX="hidden"
-              overflowY="visible"
-              zIndex="1000"
-              px="1rem"
-              py="2rem"
-              bg="#FF473A"
-              h="100%"
-              as="section"
-            >
-              <Flex
-                alignItems="center"
-                my="1rem"
+
+          <Box
+            style={{
+              left: isOpen ? "0" : "-100%",
+            }}
+            pos="absolute"
+            top="4.5rem"
+            left="0"
+            overflowX="hidden"
+            overflowY="visible"
+            zIndex="1000"
+            px="1rem"
+            py="2rem"
+            bg="#FF473A"
+            minH="100vh"
+            bottom="0"
+            w="100%"
+            as="section"
+            transition="all 400ms ease"
+          >
+            <Flex alignItems="center" my="1rem" w="100%">
+              <img src={Search} height="25px" width="25px" />
+              <Box
                 border="2px solid white"
+                py="1rem"
+                px=".7rem"
+                ml="1rem"
                 w="100%"
-                px="1rem"
-                py=".9rem"
               >
-                <img src={Search} />
                 <Input
-                  ml=".7rem"
                   type="search"
                   placeholder="Search"
                   fontSize="1.3rem"
                   border="none"
                   background="transparent"
                   color="white"
+                  w="100%"
                   _placeholder={{ color: "white" }}
                   _focus={{ outline: "none" }}
                 />
-              </Flex>
-              <Flex alignItems="center" my="1rem">
-                <img src={Events} w="30px" h="30px" />
-                <Link color="white" fontSize="1.2rem" ml="1rem" to="/" m="1rem">
-                  Exhibitions & Events
-                </Link>
-              </Flex>
-              <Flex alignItems="center" my="1rem">
-                <img src={Artist} w="30px" h="30px" />
-                <Link color="white" fontSize="1.2rem" ml="1rem" to="/">
-                  Artists & Networks
-                </Link>
-              </Flex>
-              <Flex alignItems="center" my="1rem">
-                <img src={Collections} w="30px" h="30px" />
-                <Link color="white" fontSize="1.2rem" ml="1rem" to="/">
-                  Collections
-                </Link>
-              </Flex>
-              <Flex alignItems="center" my="1rem">
-                <img src={Visit} w="30px" h="30px" />
-                <Link color="white" fontSize="1.2rem" ml="1rem" to="/">
-                  Plan Your Visit
-                </Link>
-              </Flex>
-              <Flex alignItems="center" my="1rem">
-                <img src={Member} w="30px" h="30px" />
-                <Link color="white" fontSize="1.2rem" ml="1rem" to="/">
-                  Become a Member
-                </Link>
-              </Flex>
-              <Flex alignItems="center" my="1rem">
-                <img src={Shop} w="30px" h="30px" />
-                <Link color="white" fontSize="1.2rem" ml="1rem" to="/">
-                  Shop
-                </Link>
-              </Flex>
-            </Box>
-          )}
-          <Box w="2rem">
-            <img onClick={handleClick} src={Menu} />
+              </Box>
+            </Flex>
+            <Flex alignItems="center" my="1rem">
+              <img src={Events} width="25px" height="25px" />
+              <Link fontSize="1.2rem" to="/exhibition">
+                Exhibitions & Events
+              </Link>
+            </Flex>
+            <Flex alignItems="center" my="1rem">
+              <img src={Artist} width="25px" height="25px" />
+              <Link color="white" fontSize="1.2rem" ml="1rem">
+                Artists & Networks
+              </Link>
+            </Flex>
+            <Flex alignItems="center" my="1rem">
+              <img src={Collections} width="25px" h="25px" />
+              <Link color="white" fontSize="1.2rem" ml="1rem" to="/collections">
+                Collections
+              </Link>
+            </Flex>
+            <Flex alignItems="center" my="1rem">
+              <img src={Visit} width="25px" h="25px" />
+              <Link color="white" fontSize="1.2rem" ml="1rem" to="/visit">
+                Plan Your Visit
+              </Link>
+            </Flex>
+            <Flex alignItems="center" my="1rem">
+              <img src={Member} width="25px" h="25px" />
+              <Link color="white" fontSize="1.2rem" ml="1rem" to="/member">
+                Become a Member
+              </Link>
+            </Flex>
+            <Flex alignItems="center" my="1rem">
+              <img src={Shop} width="25px" h="25px" />
+              <Link color="white" fontSize="1.2rem" ml="1rem" to="/shop">
+                Shop
+              </Link>
+            </Flex>
+            <Flex alignItems="center" my="1rem">
+              <img src={Cartimg} width="25px" h="25px" />
+              <Link color="white" fontSize="1.2rem" ml="1rem" to="/cart">
+                Cart
+              </Link>
+              <Text>
+                {/* {countCartItems ? <
+                } */}
+              </Text>
+            </Flex>
+            <Flex alignItems="center" my="1rem">
+              <img src={Logout} width="25px" h="25px" />
+              <Link color="white" fontSize="1.2rem" ml="1rem" to="/">
+                Logout
+              </Link>
+            </Flex>
+          </Box>
+          <Box
+            transition="all .3s ease"
+            pos="relative"
+            h="30px"
+            cursor="pointer"
+            onClick={handleClick}
+          >
+            <Text
+              style={{
+                transform: isOpen ? "rotate(45deg)" : "rotate(0)",
+                position: isOpen ? "absolute" : "static",
+                bottom: isOpen ? "8px" : "0",
+              }}
+              bg="black"
+              h="2px"
+              w="30px"
+              my="7px"
+              transition="all .5s ease"
+            ></Text>
+            <Text
+              style={{
+                transform: isOpen ? "scaleX(0)" : "scaleX(1)",
+              }}
+              bg="black"
+              h="2px"
+              w="30px"
+              my="7px"
+              transition="all .5s ease"
+            ></Text>
+            <Text
+              style={{
+                transform: isOpen ? "rotate(-45deg)" : "rotate(0)",
+                position: isOpen ? "absolute" : "static",
+                bottom: isOpen ? "8px" : "0",
+              }}
+              bg="black"
+              h="2px"
+              w="30px"
+              my="7px"
+              transition="all .5s ease"
+            ></Text>
           </Box>
         </Flex>
       </Box>
-    </header>
+    </Box>
   );
 };
 export default Navbar;

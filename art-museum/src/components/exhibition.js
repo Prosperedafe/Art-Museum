@@ -3,6 +3,7 @@ import Active1 from "../images/ActiveImage1.png";
 import Dropdown from "../images/dropdown.svg";
 import Activeimg from "../images/active-img.svg";
 import { useState } from "react";
+import Navbar from "./navbar";
 
 const Exhibition = () => {
   const [isOpen, setisOpen] = useState(false);
@@ -16,6 +17,7 @@ const Exhibition = () => {
 
   return (
     <>
+      <Navbar />
       <Box as="section" p="1.5rem">
         <Text color="#979797" my=".5rem" fontWeight="600">
           RETROSPECTIVE

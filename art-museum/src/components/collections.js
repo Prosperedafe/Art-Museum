@@ -6,10 +6,12 @@ import Destill from "../images/de-still.svg";
 import American from "../images/american.svg";
 import Cubism from "../images/cubism.svg";
 import Greek from "../images/greek.svg";
+import Navbar from "./navbar";
 
 const Collections = () => {
   return (
     <>
+      <Navbar />
       <Box as="section" py=".6rem" px="1rem">
         <Flex
           px="1rem"
