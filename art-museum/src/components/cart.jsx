@@ -2,10 +2,10 @@ import { Box, Heading } from "@chakra-ui/react";
 import Navbar from "./navbar";
 import data from "./data";
 import Items from "./products";
-import { useState, useEffect, useTransition, useDeferredValue } from "react";
+import { useState, useEffect, useDeferredValue } from "react";
 import Basket from "./basket";
 
-const Cart = ({ product }) => {
+const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const { products } = data;
   const onAdd = (product) => {
@@ -45,8 +45,8 @@ const Cart = ({ product }) => {
     );
   }, []);
 
-  const cartItemsCount = useDeferredValue(cartItems.lenght);
-
+  const cartItemsCount = useDeferredValue(cartItems.length);
+  console.log(cartItems.length);
   return (
     <>
       <Navbar countCartItems={cartItemsCount} />

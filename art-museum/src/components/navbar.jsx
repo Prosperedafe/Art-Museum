@@ -11,8 +11,9 @@ import Logout from "../images/logout.svg";
 import Cartimg from "../images/cart-white.svg";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  // const { countCartItems } = props;
+const Navbar = (props) => {
+  const { countCartItems } = props;
+  console.log(countCartItems);
   const [isOpen, setisOpen] = useState(false);
   const handleClick = () => {
     setisOpen((current) => !current);
@@ -119,12 +120,23 @@ const Navbar = () => {
             <Flex alignItems="center" my="1rem">
               <img src={Cartimg} width="25px" h="25px" />
               <Link color="white" fontSize="1.2rem" ml="1rem" to="/cart">
-                Cart
+                Cart{" "}
+                {props.countCartItems ? (
+                  <Text
+                    bg="white"
+                    borderRadius="50%"
+                    as="span"
+                    color="#FF473A"
+                    px=".3rem"
+                    fontSize=".9rem"
+                    fontWeight="500"
+                  >
+                    {props.countCartItems}
+                  </Text>
+                ) : (
+                  ""
+                )}
               </Link>
-              <Text>
-                {/* {countCartItems ? <
-                } */}
-              </Text>
             </Flex>
             <Flex alignItems="center" my="1rem">
               <img src={Logout} width="25px" h="25px" />

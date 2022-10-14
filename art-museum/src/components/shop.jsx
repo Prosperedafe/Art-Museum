@@ -28,7 +28,6 @@ const Shop = () => {
               borderRadius="50%"
               cursor="pointer"
               mx="5px"
-              // bg="#FF473A"
               onClick={() => setActive("Watch1")}
             ></Button>
             <Button
@@ -38,7 +37,6 @@ const Shop = () => {
               borderRadius="50%"
               cursor="pointer"
               mx="5px"
-              // bg="#FF473A"
               onClick={() => setActive("Watch2")}
             ></Button>
             <Button
@@ -48,7 +46,6 @@ const Shop = () => {
               borderRadius="50%"
               cursor="pointer"
               mx="5px"
-              // bg="#FF473A"
               onClick={() => setActive("Watch3")}
             ></Button>
           </Flex>
