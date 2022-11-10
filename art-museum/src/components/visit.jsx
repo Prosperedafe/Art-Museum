@@ -1,7 +1,6 @@
 import { Box, Text, Heading, Button, Flex } from "@chakra-ui/react";
 import { useState } from "react";
 import Dates from "./dates";
-import Navbar from "./navbar";
 
 const Visit = () => {
   const [active, setIsactive] = useState("Tomorrow");
@@ -22,7 +21,6 @@ const Visit = () => {
 
   return (
     <>
-      <Navbar />
       <Box as="section" p="1rem">
         <Heading as="h1">
           Skip the Line.

@@ -1,11 +1,13 @@
 import { Box, Text, Heading, Button, Flex } from "@chakra-ui/react";
 
-export default function Basket(props) {
+const Basket = (props) => {
+  
   const { cartItems, onAdd, onRemove } = props;
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   const taxPrice = itemsPrice * 0.14;
   const shippingPrice = itemsPrice > 2000 ? 0 : 20;
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
+
   return (
     <Box p="1rem" mb="3rem" border=" 1px solid #979797">
       <Box align="center">
@@ -103,3 +105,5 @@ export default function Basket(props) {
     </Box>
   );
 }
+
+export default Basket;

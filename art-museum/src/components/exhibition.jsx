@@ -17,7 +17,6 @@ const Exhibition = () => {
 
   return (
     <>
-      <Navbar />
       <Box as="section" p="1.5rem">
         <Text color="#979797" my=".5rem" fontWeight="600">
           RETROSPECTIVE
@@ -40,7 +39,7 @@ const Exhibition = () => {
         </Text>
         <Box as="section">
           <Box as="figure" textAlign="center" my="2rem">
-            <img src={Active1} />
+            <img src={Active1} width="100%" height="auto"/>
             <Flex justify="center" my="1rem">
               <Button
                 border="1px solid #979797"

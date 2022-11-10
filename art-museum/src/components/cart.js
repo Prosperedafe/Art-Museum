@@ -46,10 +46,9 @@ const Cart = () => {
   }, []);
 
   const cartItemsCount = useDeferredValue(cartItems.length);
-  console.log(cartItems.length);
+  // console.log(cartItems.length);
   return (
     <>
-      <Navbar countCartItems={cartItemsCount} />
       <Box as="section" p="1rem">
         <Box align="center" my=".5rem">
           <Heading as="h1" fontSize="2.5rem" color="#FF473A">
