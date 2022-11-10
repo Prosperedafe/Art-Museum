@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.caf36cd0.css",
+    "main.js": "/static/js/main.f386abba.js",
+    "static/js/787.a82c7aaa.chunk.js": "/static/js/787.a82c7aaa.chunk.js",
+    "static/media/Background Image.svg": "/static/media/Background Image.d5a0adcd22236a142a21.svg",
+    "static/media/american.svg": "/static/media/american.b7d4985a4aad11131e26380f6dc41744.svg",
+    "static/media/greek.svg": "/static/media/greek.9e647fcbbde5e7fa19b9298b96867f1a.svg",
+    "static/media/impression.svg": "/static/media/impression.1b0560880e755b5d6e20f49b59d62c66.svg",
+    "static/media/museum-img.png": "/static/media/museum-img.f51fdc96d634375ebec2.png",
+    "static/media/decoration.svg": "/static/media/decoration.45234d7e8e5b9b63e6c8f4fd3b151193.svg",
+    "static/media/bounty.png": "/static/media/bounty.3b42d2a1c2fdc7c26272.png",
+    "static/media/cubism.svg": "/static/media/cubism.c97720db8246bfae68797f7960cceb0e.svg",
+    "static/media/ActiveImage1.png": "/static/media/ActiveImage1.130e77494bf461ca4315.png",
+    "static/media/de-still.svg": "/static/media/de-still.33a18d424237b6195833f4ebfa5bea55.svg",
+    "static/media/samsung.jpg": "/static/media/samsung.98b6e7405b4722a65ab7.jpg",
+    "static/media/bags.jpg": "/static/media/bags.57fad1750d86255a32ed.jpg",
+    "static/media/cart-white.svg": "/static/media/cart-white.2aa7e3c7050309289c61904926d2efa5.svg",
+    "static/media/logout.svg": "/static/media/logout.048c5d24b9093fc3219317d5abcb2952.svg",
+    "static/media/basket.svg": "/static/media/basket.6159d48183e98e022369e5d935c77a51.svg",
+    "static/media/location.svg": "/static/media/location.a39758ccc5d173db67ea989ee525ac6c.svg",
+    "static/media/icons8-search.svg": "/static/media/icons8-search.8a6cea948cac7b9cf7d9510add6ee864.svg",
+    "index.html": "/index.html",
+    "static/media/clock.svg": "/static/media/clock.fc8cc63f72a043490d0bd962816af44c.svg",
+    "static/media/member.svg": "/static/media/member.ea25b939892cd3ee7080a9493aba8705.svg",
+    "static/media/visit.svg": "/static/media/visit.97a80a630eafc51d4f0b0837cb513146.svg",
+    "static/media/search.svg": "/static/media/search.6131dbaa1ec556a4ce996d1feac528bd.svg",
+    "static/media/Collections.svg": "/static/media/Collections.85ae93c3a5f0dd294e6b25fdc1edf1b4.svg",
+    "static/media/dropdown.svg": "/static/media/dropdown.475fb1a9ea1796e9d4a9537b1efe0c50.svg",
+    "static/media/open.svg": "/static/media/open.05382a7b3d3cc26013928472ec08e0d8.svg",
+    "static/media/active-img.svg": "/static/media/active-img.093315518282afdf0a8cbfbeceeb78ee.svg",
+    "main.caf36cd0.css.map": "/static/css/main.caf36cd0.css.map",
+    "main.f386abba.js.map": "/static/js/main.f386abba.js.map",
+    "787.a82c7aaa.chunk.js.map": "/static/js/787.a82c7aaa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.caf36cd0.css",
+    "static/js/main.f386abba.js"
+  ]
+}
