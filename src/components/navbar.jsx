@@ -36,7 +36,6 @@ const Navbar = () => {
             ART
             <br /> MUSEUM
           </Text>
-
           <Box
             style={{
               left: isOpen ? "0" : "-100%",
@@ -112,21 +111,6 @@ const Navbar = () => {
               <img src={Cartimg} width="25px" h="25px" />
               <Link color="white" fontSize="1.2rem" ml="1rem" to="/cart">
                 Cart
-                {/* {props.countCartItems ? (
-                  <Text
-                    bg="white"
-                    borderRadius="50%"
-                    as="span"
-                    color="#FF473A"
-                    px=".3rem"
-                    fontSize=".9rem"
-                    fontWeight="500"
-                  >
-                    {props.countCartItems}
-                  </Text>
-                ) : (
-                  ""
-                )} */}
               </Link>
             </Flex>
             <Flex alignItems="center" my="1.7rem">
