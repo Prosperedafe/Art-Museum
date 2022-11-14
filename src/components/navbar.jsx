@@ -79,43 +79,57 @@ const Navbar = () => {
             </Flex>
             <Flex alignItems="center" my="1.7rem">
               <img src={Events} width="25px" height="25px" />
-              <Link fontSize="1.2rem" to="/exhibition">
+              <Link
+              onClick={handleClick}
+              fontSize="1.2rem" to="/exhibition">
                 Exhibitions & Events
               </Link>
             </Flex>
             <Flex alignItems="center" my="1.7rem">
               <img src={Collections} width="25px" h="25px" />
-              <Link color="white" fontSize="1.2rem" ml="1rem" to="/collections">
+              <Link
+              onClick={handleClick}
+              color="white" fontSize="1.2rem" ml="1rem" to="/collections">
                 Collections
               </Link>
             </Flex>
             <Flex alignItems="center" my="1.7rem">
               <img src={Visit} width="25px" h="25px" />
-              <Link color="white" fontSize="1.2rem" ml="1rem" to="/visit">
+              <Link
+              onClick={handleClick}
+              color="white" fontSize="1.2rem" ml="1rem" to="/visit">
                 Plan Your Visit
               </Link>
             </Flex>
             <Flex alignItems="center" my="1.7rem">
               <img src={Member} width="25px" h="25px" />
-              <Link color="white" fontSize="1.2rem" ml="1rem" to="/member">
+              <Link
+              onClick={handleClick}
+              color="white" fontSize="1.2rem" ml="1rem" to="/member">
                 Become a Member
               </Link>
             </Flex>
             <Flex alignItems="center" my="1.7rem">
               <img src={Member} width="25px" h="25px" />
-              <Link color="white" fontSize="1.2rem" ml="1rem" to="/masters">
+              <Link
+              onClick={handleClick}
+              color="white" fontSize="1.2rem" ml="1rem" to="/masters">
                 Masters
               </Link>
             </Flex>
             <Flex alignItems="center" my="1.7rem">
               <img src={Cartimg} width="25px" h="25px" />
-              <Link color="white" fontSize="1.2rem" ml="1rem" to="/cart">
+              <Link 
+              onClick={handleClick}
+              color="white" fontSize="1.2rem" ml="1rem" to="/cart">
                 Cart
               </Link>
             </Flex>
             <Flex alignItems="center" my="1.7rem">
               <img src={Logout} width="25px" h="25px" />
-              <Link color="white" fontSize="1.2rem" ml="1rem" to="/">
+              <Link
+              onClick={handleClick}
+              color="white" fontSize="1.2rem" ml="1rem" to="/">
                 Logout
               </Link>
             </Flex>

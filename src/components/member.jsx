@@ -6,6 +6,7 @@ import Navbar from "./navbar";
 const Member = () => {
   return (
     <>
+    <Navbar/>
       <Box as="section" pos="relative">
         <Box as="figure">
           <img src={Bounty} width="100%" height="auto" />

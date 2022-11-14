@@ -46,15 +46,13 @@ const Cart = () => {
   }, []);
 
   const cartItemsCount = useDeferredValue(cartItems.length);
-  // console.log(cartItems.length);
+
   return (
     <>
       <Box as="section" p="1rem">
-        <Box align="center" my=".5rem">
-          <Heading as="h1" fontSize="2.5rem" color="#FF473A">
+          <Heading as="h1" textAlign="center" mt="8rem" fontSize="3.5rem" color="#FF473A">
             ITEMS
           </Heading>
-        </Box>
         <Box my="1rem">
           {products.map((product) => (
             <Items

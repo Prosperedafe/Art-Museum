@@ -11,6 +11,7 @@ import Navbar from "./navbar";
 const Collections = () => {
   return (
     <>
+    <Navbar/>
       <Box as="section" py=".6rem" px="1rem">
         <Flex
           px="1rem"

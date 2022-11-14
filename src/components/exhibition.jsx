@@ -17,6 +17,7 @@ const Exhibition = () => {
 
   return (
     <>
+    <Navbar/>
       <Box as="section" p="1.5rem">
         <Text color="#979797" my=".5rem" fontWeight="600">
           RETROSPECTIVE

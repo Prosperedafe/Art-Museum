@@ -7,6 +7,7 @@ import Navbar from "./navbar";
 const Masters = () => {
   return (
     <>
+    <Navbar/>
       <Box as="section">
         <Box as="figure">
           <img src={Museum} width="100%" />
