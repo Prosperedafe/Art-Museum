@@ -47,7 +47,7 @@ const Collections = () => {
           px=".3rem"
           as="section"
           templateColumns="repeat(2, 1fr)"
-          gap={20}
+          gap={10}
         >
           <GridItem as="figure">
             <img w="100%" src={Decoration} alt="decoration" />
