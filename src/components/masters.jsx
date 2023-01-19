@@ -2,15 +2,13 @@ import { Box, Text, Flex, Heading, Button } from "@chakra-ui/react";
 import Museum from "../images/museum-img.png";
 import Clock from "../images/clock.svg";
 import Location from "../images/location.svg";
-import Navbar from "./navbar";
 
 const Masters = () => {
   return (
     <>
-    <Navbar/>
       <Box as="section">
         <Box as="figure">
-          <img src={Museum} width="100%" />
+          <img src={Museum} width="100%" alt="museum" />
         </Box>
         <Box px="1rem">
           <Text color="#979797" fontWeight="500">
@@ -51,13 +49,13 @@ const Masters = () => {
         </Button>
         <Flex justify="space-between">
           <Flex m=".4rem">
-            <img src={Location} height="30px" />
+            <img src={Location} height="30px" alt="location" />
             <Text as="time" color="#FF473A" fontSize="1rem" fontWeight="500">
               151 3rd St San Francisco, CA 94103
             </Text>
           </Flex>
           <Flex m=".4rem">
-            <img src={Clock} height="30px" />
+            <img src={Clock} height="30px" alt="clock" />
             <Text as="time" color="#FF473A" fontSize="1rem" fontWeight="500">
               151 3rd St San Francisco, CA 94103
             </Text>

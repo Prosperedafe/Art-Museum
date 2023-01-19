@@ -1,15 +1,13 @@
 import { Text, Box, Heading, Button, Flex } from "@chakra-ui/react";
 import Bounty from "../images/bounty.png";
 import Open from "../images/open.svg";
-import Navbar from "./navbar";
 
 const Member = () => {
   return (
     <>
-    <Navbar/>
       <Box as="section" pos="relative">
         <Box as="figure">
-          <img src={Bounty} width="100%" height="auto" />
+          <img src={Bounty} width="100%" height="auto" alt="bounty" />
         </Box>
         <Heading
           pos="absolute"
@@ -35,7 +33,7 @@ const Member = () => {
                 $60 tax deductible
               </Text>
             </Heading>
-            <img src={Open} />
+            <img src={Open} alt="open" />
           </Flex>
           <Flex justify="space-between" my="1rem">
             <Heading as="h3">
@@ -45,7 +43,7 @@ const Member = () => {
                 $60 tax deductible
               </Text>
             </Heading>
-            <img src={Open} />
+            <img src={Open} alt="open" />
           </Flex>
           <Flex justify="space-between" my="1rem">
             <Heading as="h3">
@@ -55,7 +53,7 @@ const Member = () => {
                 $60 tax deductible
               </Text>
             </Heading>
-            <img src={Open} />
+            <img src={Open} alt="open" />
           </Flex>
           <Button
             color="white"

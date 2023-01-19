@@ -1,23 +1,16 @@
 import { Box, Text, Heading, Flex, Button } from "@chakra-ui/react";
 import Active1 from "../images/ActiveImage1.png";
 import Dropdown from "../images/dropdown.svg";
-import Activeimg from "../images/active-img.svg";
 import { useState } from "react";
-import Navbar from "./navbar";
 
 const Exhibition = () => {
   const [isOpen, setisOpen] = useState(false);
   const handleClick = () => {
     setisOpen((current) => !current);
   };
-  const [preview, setpreview] = useState(false);
-  const handleActive = () => {
-    setpreview((current) => !current);
-  };
 
   return (
     <>
-    <Navbar/>
       <Box as="section" p="1.5rem">
         <Text color="#979797" my=".5rem" fontWeight="600">
           RETROSPECTIVE
@@ -40,7 +33,7 @@ const Exhibition = () => {
         </Text>
         <Box as="section">
           <Box as="figure" textAlign="center" my="2rem">
-            <img src={Active1} width="100%" height="auto"/>
+            <img src={Active1} width="100%" height="auto" alt="active" />
             <Flex justify="center" my="1rem">
               <Button
                 border="1px solid #979797"
@@ -98,6 +91,7 @@ const Exhibition = () => {
             style={{
               transform: isOpen ? "rotate(180deg)" : "rotate(0)",
             }}
+            alt="dropdown"
           />
         </Flex>
         {isOpen && (

@@ -1,37 +1,36 @@
 import { Box, Heading } from "@chakra-ui/react";
-import Navbar from "./navbar";
 import data from "./data";
 import Items from "./products";
-import { useState, useEffect, useDeferredValue } from "react";
+import { useState, useEffect } from "react";
 import Basket from "./basket";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const { products } = data;
   const onAdd = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
+    const exist = cartItems.find((goods) => goods.id === product.id);
     if (exist) {
-      const newCartItems = cartItems.map((x) =>
-        x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+      const newCartItems = cartItems.map((goods) =>
+        goods.id === product.id ? { ...exist, quantity: exist.quantity + 1 } : goods
       );
       setCartItems(newCartItems);
       localStorage.setItem("cartItems", JSON.stringify(newCartItems));
     } else {
-      const newCartItems = [...cartItems, { ...product, qty: 1 }];
+      const newCartItems = [...cartItems, { ...product, quantity: 1 }];
       setCartItems(newCartItems);
       localStorage.setItem("cartItems", JSON.stringify(newCartItems));
     }
   };
 
   const onRemove = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-    if (exist.qty === 1) {
-      const newCartItems = cartItems.filter((x) => x.id !== product.id);
+    const exist = cartItems.find((goods) => goods.id === product.id);
+    if (exist.quantity === 1) {
+      const newCartItems = cartItems.filter((goods) => goods.id !== product.id);
       setCartItems(newCartItems);
       localStorage.setItem("cartItems", JSON.stringify(newCartItems));
     } else {
-      const newCartItems = cartItems.map((x) =>
-        x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+      const newCartItems = cartItems.map((goods) =>
+        goods.id === product.id ? { ...exist, quantity: exist.quantity - 1 } : goods
       );
       setCartItems(newCartItems);
       localStorage.setItem("cartItems", JSON.stringify(newCartItems));
@@ -45,14 +44,14 @@ const Cart = () => {
     );
   }, []);
 
-  const cartItemsCount = useDeferredValue(cartItems.length);
+  // const cartItemsCount = useDeferredValue(cartItems.length);
 
   return (
     <>
       <Box as="section" p="1rem">
-          <Heading as="h1" textAlign="center" mt="8rem" fontSize="3.5rem" color="#FF473A">
-            ITEMS
-          </Heading>
+        <Heading as="h1" textAlign="center" mt="2rem" fontSize="3.5rem" color="#FF473A">
+          ITEMS
+        </Heading>
         <Box my="1rem">
           {products.map((product) => (
             <Items
@@ -61,7 +60,7 @@ const Cart = () => {
               onAdd={onAdd}
               onRemove={onRemove}
               cartItems={cartItems}
-              item={cartItems.find((x) => x.id === product.id)}
+              item={cartItems.find((goods) => goods.id === product.id)}
             />
           ))}
         </Box>

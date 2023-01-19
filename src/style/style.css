@@ -1,9 +1,13 @@
-.login-box{
+.login-box {
     background: url(../images/Background\ Image.svg) no-repeat;
     background-size: cover;
     min-height: 100vh;
+    top: 0;
+    position: absolute;
+    z-index: 1000;
 }
-a{
+
+a {
     color: white;
     display: block;
     margin: .5rem 1rem;

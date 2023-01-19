@@ -1,6 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import Navbar from "./components/navbar";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Login from "./components/login";
 import Collections from "./components/collections";
 import Member from "./components/member";
@@ -9,15 +8,18 @@ import Exhibition from "./components/exhibition";
 import Visit from "./components/visit";
 import Cart from "./components/cart";
 import Basket from "./components/basket";
+import Navbar from "./components/navbar";
 
 const App = () => {
 
   return (
-    <div className="app">
+    <>
+      <div className="message"><h1>This site is only avaliable for moblie viewers</h1> </div>
+      <div className="app">
         <BrowserRouter>
+          <Navbar />
           <Routes>
-            <Route path="/" element={<Navigate to="/login" replace />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Login />} />
             <Route path="/collections" element={<Collections />} />
             <Route path="/member" element={<Member />} />
             <Route path="/exhibition" element={<Exhibition />} />
@@ -27,8 +29,8 @@ const App = () => {
             <Route path="/basket" element={<Basket />} />
           </Routes>
         </BrowserRouter>
-    </div>
-    
+      </div>
+    </>
   )
 };
 export default App;

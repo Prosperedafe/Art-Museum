@@ -6,12 +6,10 @@ import Destill from "../images/de-still.svg";
 import American from "../images/american.svg";
 import Cubism from "../images/cubism.svg";
 import Greek from "../images/greek.svg";
-import Navbar from "./navbar";
 
 const Collections = () => {
   return (
     <>
-    <Navbar/>
       <Box as="section" py=".6rem" px="1rem">
         <Flex
           px="1rem"
@@ -31,7 +29,7 @@ const Collections = () => {
             _placeholder={{ color: "#FF473A" }}
             _focus={{ outline: "none" }}
           />
-          <img src={SearchImg} />
+          <img src={SearchImg} alt="search" />
         </Flex>
         <Text
           as="label"
@@ -52,37 +50,37 @@ const Collections = () => {
           gap={20}
         >
           <GridItem as="figure">
-            <img w="100%" src={Decoration} />
+            <img w="100%" src={Decoration} alt="decoration" />
             <Text as="figcaption" noOfLines={2}>
               DECORATIVE ARTS & CRAFTS{" "}
             </Text>
           </GridItem>
           <GridItem as="figure">
-            <img w="100%" src={Impression} />
+            <img w="100%" src={Impression} alt="impression" />
             <Text as="figcaption" noOfLines={2}>
               AMERICAN IMPRESSIONISM
             </Text>
           </GridItem>
           <GridItem as="figure">
-            <img w="100%" src={Destill} />
+            <img w="100%" src={Destill} alt="destil" />
             <Text as="figcaption" noOfLines={2}>
               DE STIJL
             </Text>
           </GridItem>
           <GridItem as="figure">
-            <img w="100%" src={Cubism} />
+            <img w="100%" src={Cubism} alt="cubism" />
             <Text as="figcaption" noOfLines={2}>
               CUBISM
             </Text>
           </GridItem>
           <GridItem as="figure">
-            <img w="100%" src={American} />
+            <img w="100%" src={American} alt="american" />
             <Text as="figcaption" noOfLines={2}>
               AMERICAN
             </Text>
           </GridItem>
           <GridItem as="figure">
-            <img w="100%" src={Greek} />
+            <img w="100%" src={Greek} alt="greek" />
             <Text as="figcaption" noOfLines={2}>
               GREEK ANTIQUITIES
             </Text>

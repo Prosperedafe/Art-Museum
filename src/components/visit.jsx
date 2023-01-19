@@ -1,7 +1,6 @@
 import { Box, Text, Heading, Button, Flex } from "@chakra-ui/react";
 import { useState } from "react";
 import Dates from "./dates";
-import Navbar from "./navbar";
 
 const Visit = () => {
   const [active, setIsactive] = useState("Tomorrow");
@@ -22,7 +21,6 @@ const Visit = () => {
 
   return (
     <>
-    <Navbar/>
       <Box as="section" p="1rem">
         <Heading as="h1">
           Skip the Line.
@@ -34,9 +32,27 @@ const Visit = () => {
         </Text>
 
         <Flex as="section" justify="space-between" mt="2rem" px="1rem">
-          <Heading onClick={() => setIsactive("Tomorrow")}>Today</Heading>
-          <Heading onClick={() => setIsactive("Today")}>Tomorrow</Heading>
-          <Heading onClick={() => setIsactive("Other")}>Other</Heading>
+          <Heading
+            className={active === "Tomorrow" ? "active-tab" : ""}
+            cursor="pointer"
+            onClick={() => setIsactive("Tomorrow")}
+          >
+            Today
+          </Heading>
+          <Heading
+            className={active === "Today" ? "active-tab" : ""}
+            cursor="pointer"
+            onClick={() => setIsactive("Today")}
+          >
+            Tomorrow
+          </Heading>
+          <Heading
+            className={active === "Other" ? "active-tab" : ""}
+            cursor="pointer"
+            onClick={() => setIsactive("Other")}
+          >
+            Other
+          </Heading>
         </Flex>
         {active === "Tomorrow" && (
           <Dates

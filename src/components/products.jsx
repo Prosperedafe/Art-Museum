@@ -1,14 +1,10 @@
 import { Box, Text, Button, Heading, Flex } from "@chakra-ui/react";
-import data from "./data";
 import Cart from "../images/cart-white.svg";
-import Basket from "./basket";
-import Navbar from "./navbar";
 
 export default function Items(props) {
   const { item, product, onAdd, onRemove } = props;
   return (
     <>
-     <Navbar/>
       <Box p="1rem">
         <img width="100%" src={product.image} alt={product.name} />
         <Heading color="#FF473A">{product.name}</Heading>
@@ -73,7 +69,7 @@ export default function Items(props) {
               >
                 Add to Cart
               </Button>
-              <img src={Cart} height="25px" />
+              <img src={Cart} height="25px" alt="cart" />
             </Flex>
           )}
         </Box>

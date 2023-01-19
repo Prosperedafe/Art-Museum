@@ -1,12 +1,11 @@
 import { Box, Text, Heading, Button, Flex } from "@chakra-ui/react";
 
 const Basket = (props) => {
-  
+
   const { cartItems, onAdd, onRemove } = props;
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   const taxPrice = itemsPrice * 0.14;
   const shippingPrice = itemsPrice > 2000 ? 0 : 20;
-  const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
   return (
     <Box p="1rem" mb="3rem" border=" 1px solid #979797">
@@ -24,7 +23,7 @@ const Basket = (props) => {
       )}
       {cartItems.map((item) => (
         <Box key={item.id} mb="1rem">
-          <img src={item.image} width="100%" />
+          <img src={item.image} width="100%" alt="item" />
           <Text fontSize="1.5rem" fontWeight="500">
             {item.name}
           </Text>
