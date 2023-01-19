@@ -1,5 +1,6 @@
 import { Text, Box, Button, Input } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import "../style/style.css";
 
 const Login = () => {
   return (
